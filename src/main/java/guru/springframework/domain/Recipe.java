@@ -24,7 +24,8 @@ public class Recipe {
     private Byte[] image;
     @OneToOne(cascade = CascadeType.ALL)
     private Notes notes;
-
+    @Enumerated(value = EnumType.STRING)
+    private Diffuculty diffuculty;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe")
     private Ingredient ingredient;
 
